@@ -1,0 +1,137 @@
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Small devices (640px and up) */
+@media (min-width: 640px) {
+  :root {
+    --container-padding: 1.5rem;
+  }
+
+  .container,
+  .section__inner,
+  .cta-block__inner {
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+  }
+}
+
+/* Medium devices (768px and up) */
+@media (min-width: 768px) {
+  :root {
+    --container-padding: 2rem;
+  }
+
+  .container,
+  .section__inner,
+  .cta-block__inner {
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+  }
+}
+
+/* Large devices (1024px and up) */
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: 3rem;
+  }
+
+  .container,
+  .section__inner,
+  .cta-block__inner {
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+  }
+}
+
+/* Extra large devices (1280px and up) */
+@media (min-width: 1280px) {
+  :root {
+    --container-padding: 4rem;
+  }
+
+  .container,
+  .section__inner,
+  .cta-block__inner {
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+  }
+}
+
+/* ========================================
+   MOBILE NAVIGATION
+   ======================================== */
+
+@media (max-width: 1023px) {
+  .site-nav {
+    display: none;
+  }
+
+  .site-header__desktop-cta {
+    display: none;
+  }
+}
+
+/* ========================================
+   LAYOUT ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 639px) {
+  .section {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
+  }
+
+  .hero {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
+  }
+
+  .page-hero {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-2xl);
+  }
+}
+
+/* ========================================
+   FORM ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 639px) {
+  .form__actions {
+    flex-direction: column;
+  }
+
+  .form__actions .btn {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  .site-header,
+  .site-footer,
+  .btn,
+  .cta-block,
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .section {
+    padding: 1rem 0;
+  }
+}
