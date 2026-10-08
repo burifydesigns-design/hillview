@@ -86,11 +86,11 @@
       var href = link.getAttribute('href') || '';
 
       if (href.indexOf('book.nookal.com') !== -1 || link.hasAttribute('data-booking-btn')) {
-        window.HillviewAnalytics && window.HillviewAnalytics.trackBookingClick();
+        window.HillviewAnalytics?.trackBookingClick();
       } else if (href.indexOf('tel:') === 0) {
-        window.HillviewAnalytics && window.HillviewAnalytics.trackPhoneClick();
+        window.HillviewAnalytics?.trackPhoneClick();
       } else if (href.indexOf('mailto:') === 0) {
-        window.HillviewAnalytics && window.HillviewAnalytics.trackEmailClick();
+        window.HillviewAnalytics?.trackEmailClick();
       }
     });
 
@@ -102,12 +102,12 @@
       form.addEventListener('focusin', function () {
         if (!hasInteracted) {
           hasInteracted = true;
-          window.HillviewAnalytics && window.HillviewAnalytics.trackFormStart(formId);
+          window.HillviewAnalytics?.trackFormStart(formId);
         }
       });
 
       form.addEventListener('submit', function () {
-        window.HillviewAnalytics && window.HillviewAnalytics.trackFormSubmit(formId);
+        window.HillviewAnalytics?.trackFormSubmit(formId);
       });
     });
   }

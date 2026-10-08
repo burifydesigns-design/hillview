@@ -21,7 +21,7 @@
         container.innerHTML = html;
         // Initialize any JS-dependent features after partial loads
         if (containerId === 'site-header') {
-          window.HillviewNavigation && window.HillviewNavigation.init();
+          window.HillviewNavigation?.init();
         }
       })
       .catch(function (err) {

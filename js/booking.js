@@ -12,7 +12,7 @@
     var bookingButtons = document.querySelectorAll('[data-booking-btn]');
 
     bookingButtons.forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
+      btn.addEventListener('click', function () {
         // Allow default for actual links, but track if needed
         // Currently we just use direct href links
       });

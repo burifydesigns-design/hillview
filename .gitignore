@@ -12,7 +12,7 @@ node_modules/
 /coverage
 
 # Next.js
-/.next/
+.next/
 /out/
 
 # Production build artifacts
@@ -56,3 +56,17 @@ Desktop.ini
 # Cache directories
 .cache/
 tmp/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+
+# Image optimization outputs
+/public/images/**/enhanced/
+
+# Kilo config
+.kilo/

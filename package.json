@@ -29,7 +29,7 @@
   "author": "",
   "license": "ISC",
   "overrides": {
-    "braces": "^3.0.3"
+    "braces": "3.0.3"
   },
   "type": "module"
 }

@@ -37,7 +37,7 @@
     // Close on window resize to desktop
     window.addEventListener('resize', function () {
       if (window.innerWidth >= 1024 && menuOpen) {
-        closeMenu(true);
+        closeMenu();
       }
     });
   }
@@ -60,7 +60,7 @@
     }
   }
 
-  function closeMenu(silent) {
+  function closeMenu() {
     if (!menuOpen) return;
     menuOpen = false;
     mobileMenu.classList.remove('is-open');
