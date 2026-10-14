@@ -1,5 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
+
+const BOOKING_URL = process.env.NEXT_PUBLIC_NOOKAL_BOOKING_URL || "";
 
 export default function HomePage() {
   return (
@@ -17,7 +18,7 @@ export default function HomePage() {
               </p>
               <div className="hero__actions">
                 <a
-                  href="https://book.nookal.com/bookings/book/ACB0861D-c3df-0dEE-09FD-016FBbfcca9d/location"
+                  href={BOOKING_URL}
                   className="btn btn--primary"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -539,7 +540,7 @@ export default function HomePage() {
       <section className="section section--white section--border">
         <div className="container">
           <div className="section-heading section-heading--center mb-4">
-            <h2 className="section-heading__title">Don't just take our word for it.</h2>
+            <h2 className="section-heading__title">Don&apos;t just take our word for it.</h2>
           </div>
           <div className="testimonial-grid">
             <div className="testimonial">
@@ -876,7 +877,7 @@ export default function HomePage() {
           </p>
           <div className="cta-block__actions">
             <a
-              href="https://book.nookal.com/bookings/book/ACB0861D-c3df-0dEE-09FD-016FBbfcca9d/location"
+              href={BOOKING_URL}
               className="btn btn--secondary"
               target="_blank"
               rel="noopener noreferrer"

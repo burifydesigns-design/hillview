@@ -1,3 +1,5 @@
+const BOOKING_URL = process.env.NEXT_PUBLIC_NOOKAL_BOOKING_URL || "";
+
 export default function Footer() {
   return (
     <footer className="site-footer" id="site-footer" role="contentinfo">
@@ -90,7 +92,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://book.nookal.com/bookings/book/ACB0861D-c3df-0dEE-09FD-016FBbfcca9d/location"
+                  href={BOOKING_URL}
                   className="site-footer__link"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -130,7 +132,7 @@ export default function Footer() {
 
         <div className="site-footer__bottom">
           <p className="site-footer__copyright">
-            &copy; 2025 Hillview Physiotherapy Group. All rights reserved.
+            &copy; 2026 Hillview Physiotherapy Group. All rights reserved.
           </p>
           <div className="site-footer__legal">
             <a href="/privacy-policy" className="site-footer__legal-link">

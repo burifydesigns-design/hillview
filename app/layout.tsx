@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.hillviewphysiogroup.com.au";
+
 export const metadata: Metadata = {
   title: "Hillview Physiotherapy Group | Physiotherapy in Dromana & the Mornington Peninsula",
   description: "Physiotherapy and rehabilitation designed around you. At Hillview Physiotherapy Group in Dromana, we combine hands-on treatment, tailored exercise, and clear education to help you recover faster and move confidently.",
@@ -10,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hillview Physiotherapy Group | Physiotherapy in Dromana",
     description: "Physiotherapy and rehabilitation designed around you. Move better. Recover stronger.",
-    url: "https://www.hillviewphysiogroup.com.au",
+    url: SITE_URL,
     siteName: "Hillview Physiotherapy Group",
     locale: "en_AU",
     type: "website",
@@ -42,7 +44,7 @@ export default function RootLayout({
               "@type": "MedicalBusiness",
               name: "Hillview Physiotherapy Group",
               description: "Physiotherapy and rehabilitation in Dromana, Mornington Peninsula.",
-              url: "https://www.hillviewphysiogroup.com.au",
+               url: SITE_URL,
               telephone: "(03) 5911 0201",
               email: "info@hillviewphysiogroup.com.au",
               address: {
@@ -78,19 +80,18 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
-        <script src="/js/includes.js" />
-        <script src="/js/analytics.js" />
-        <script src="/js/navigation.js" />
-        <script src="/js/faq.js" />
-        <script src="/js/booking.js" />
-        <script src="/js/main.js" />
+        <script defer src="/js/analytics.js" />
+        <script defer src="/js/navigation.js" />
+        <script defer src="/js/faq.js" />
+        <script defer src="/js/booking.js" />
+        <script defer src="/js/main.js" />
       </body>
     </html>
   );

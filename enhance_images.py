@@ -46,8 +46,9 @@ def enhance_image(input_path, output_path, max_dimension=2000):
         print(f"  Saved JPEG fallback: {jpg_path}")
 
 def main():
-    input_dir = r'G:\PROJECTS\hillview physiotherapy\hillview-physiotherapy\public\images\team'
-    output_dir = r'G:\PROJECTS\hillview physiotherapy\hillview-physiotherapy\public\images\team\enhanced'
+    import sys
+    input_dir = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(__file__), 'public', 'images', 'team')
+    output_dir = os.path.join(input_dir, 'enhanced')
     
     os.makedirs(output_dir, exist_ok=True)
     

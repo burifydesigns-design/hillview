@@ -70,3 +70,6 @@ __pycache__/
 
 # Kilo config
 .kilo/
+
+# Qodo AI
+.qodo/

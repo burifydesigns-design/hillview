@@ -1,12 +1,16 @@
 "use client";
 
+import Link from "next/link";
+
+const BOOKING_URL = process.env.NEXT_PUBLIC_NOOKAL_BOOKING_URL || "";
+
 export default function Header() {
   return (
     <header className="site-header" id="site-header" role="banner">
       <div className="site-header__inner container">
-        <a href="/" className="site-logo" aria-label="Hillview Physiotherapy Group home">
+        <Link href="/" className="site-logo" aria-label="Hillview Physiotherapy Group home">
           Hillview<span className="site-logo__accent">Physiotherapy</span>
-        </a>
+        </Link>
 
         <nav className="site-nav" aria-label="Main navigation">
           <ul className="site-nav__list">
@@ -42,7 +46,7 @@ export default function Header() {
             </li>
           </ul>
           <a
-            href="https://book.nookal.com/bookings/book/ACB0861D-c3df-0dEE-09FD-016FBbfcca9d/location"
+            href={BOOKING_URL}
             className="site-nav__cta"
             target="_blank"
             rel="noopener noreferrer"
@@ -53,7 +57,7 @@ export default function Header() {
 
         <div className="site-header__mobile-actions">
           <a
-            href="https://book.nookal.com/bookings/book/ACB0861D-c3df-0dEE-09FD-016FBbfcca9d/location"
+            href={BOOKING_URL}
             className="site-header__mobile-cta"
             target="_blank"
             rel="noopener noreferrer"
@@ -126,7 +130,7 @@ export default function Header() {
             </li>
             <li className="mobile-menu__item">
               <a
-                href="https://book.nookal.com/bookings/book/ACB0861D-c3df-0dEE-09FD-016FBbfcca9d/location"
+                href={BOOKING_URL}
                 className="mobile-menu__link"
                 target="_blank"
                 rel="noopener noreferrer"

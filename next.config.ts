@@ -8,6 +8,12 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      { source: "/our-team/:path*", destination: "/team/:path*", permanent: true },
+      { source: "/the-clinic", destination: "/clinic", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

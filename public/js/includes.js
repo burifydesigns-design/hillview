@@ -5,8 +5,8 @@
 (function () {
   'use strict';
 
-  const HEADER_URL = './partials/header.html';
-  const FOOTER_URL = './partials/footer.html';
+  const HEADER_URL = '/partials/header.html';
+  const FOOTER_URL = '/partials/footer.html';
 
   function loadPartial(url, containerId) {
     const container = document.getElementById(containerId);
